@@ -1,0 +1,29 @@
+<mat-grid-tile-header>
+  {{speaker.name}}
+</mat-grid-tile-header>
+<div>
+
+  {{speaker.twitter}}
+
+</div>
+<div *ngIf="speaker.website">
+  <a href="{{speaker.website}}" target="_blank">
+    {{speaker.website}}
+  </a>
+</div>
+<div>
+  Topics:
+  <span *ngFor="let topic of speaker.topics">
+    {{topic}}
+  </span>
+</div>
+
+<div *ngIf="speaker.location">
+  Location: {{speaker.location}}
+</div>
+<div>
+  Languages:
+  <span *ngFor="let language of speaker.languages">
+    {{language}}
+  </span>
+</div>
