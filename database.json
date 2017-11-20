@@ -1,0 +1,36 @@
+{
+  "organizations": {
+    "wtm": {
+      "name": "Women Tech Makers",
+      "about": "Google's Women Techmakers program provides visibility, community, and resources for women in technology.",
+      "url": "https://www.womentechmakers.com/",
+      "logo": "http://womentechmakerstucson.weebly.com/uploads/8/9/2/0/89202350/logo-wtm-1_orig.png"
+    },
+    "acm-w": {
+      "name": "ACM-W",
+      "about": "ACM-W supports, celebrates, and advocates internationally for the full engagement of women in all aspects of the computing field, providing a wide range of programs and services to ACM members and working in the larger community to advance the contributions of technical women.",
+      "url": "https://women.acm.org/",
+      "logo": "http://goa.acm.org/acmwhack/wp-content/uploads/2016/07/acm-w-e1468341597223.png"
+    },
+
+    "wics": {
+      "name": "Women in CyberSecurity",
+      "about": "Women in CyberSecurity works to recruit, retain, and advance women in cybersecurity. ",
+      "url": "https://www.wicys.net/",
+      "logo": "https://static1.squarespace.com/static/555f9696e4b0767a7f0769b3/t/57ff2f02c534a5a6fde8b44b/1476341512173/"
+    },
+    "swe": {
+      "name": "Society of Women Engineers",
+      "about": "SWE encourages women to achieve full potential in careers as engineers and leaders.",
+      "url": "http://societyofwomenengineers.swe.org/",
+      "logo": "https://outreach.engineering.columbia.edu/sites/default/files/styles/cu_crop/public/2016-11/swe_logo.png?itok=_q-_qRR4"
+    },
+    "ncwit": {
+      "name": "National Center for Women in Technology",
+      "about": "NCWIT is a national non-profit focused on women's participation in computing across the entire ecosystem",
+      "url": "https://www.ncwit.org/",
+      "logo": "https://www.ncwit.org/sites/all/themes/ncwit/images/ncwit-logo-234.png"
+    }
+  },
+  "topics": ["API", "Accessibility", "Android", "Angular", "AngularJS", "Animations", "Bootstrap", "C#", "CMS", "CSS", "ChromeV8", "Community", "Cybersecurity", "DevRel", "Developer Evangelism", "Diversity", "Docker", "Drupal", "ES6", "Firebase", "Flexbox", "Flux", "Frontend Development", "HTML", "IOT", "Ideation", "Java", "JavaScript", "Keynote SPeeches", "Keynote Speeches", "Laravel", "Learning to Code", "Machine Learning", "Mental Health and Tech", "Mentoring", "Mobile", "Moms in Tech", "NativeScript", "Nativescript", "Node", "Open Source", "Organizer", "PHP", "Polymer", "Powershell", "Python", "Rails", "React", "Redux", "Relay", "Rest API", "Ruby", "SEO", "SVG", "Sass", "Search", "Startup", "Technical Writing", "TypeScript", "UX", "Vue", "Web Design", "Web Development", "WebAssembly", "Women in Tech", "Workshops"]
+}

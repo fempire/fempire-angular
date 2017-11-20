@@ -1,0 +1,80 @@
+button,
+a {
+  &.mat-fab {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 10;
+  }
+}
+
+div.mat-tab-labels {
+  background-color: white;
+}
+
+fem-mentors,
+fem-organizers,
+fem-speakers {
+  mat-tab-group {
+    div.mat-tab-body-wrapper {
+      mat-tab-body {
+        min-height: calc(100vh - 113px);
+        height: calc(100vh - 113px);
+        max-height: calc(100vh - 113px);
+        @media (max-width: 600px) and (orientation: portrait) {
+          min-height: calc(100vh - 105px);
+          height: calc(100vh - 105px);
+          max-height: calc(100vh - 105px);
+        }
+      }
+    }
+  }
+  agm-map {
+    height: 100%;
+  }
+}
+
+img.mat-list-icon {
+  display: inline-block !important;
+  height: 40px !important;
+  width: 40px !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+}
+
+div.chips {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+mat-card-content.mat-card-content {
+  padding-top: 8px;
+}
+
+mat-card-title.mat-card-title {
+  font-size: 1.2rem !important;
+}
+
+mat-dialog-container.mat-dialog-container {
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 100vh;
+}
+
+mat-form-field {
+  width: 100%;
+  input {
+    width: 100%;
+  }
+}
+
+mat-list-item.mat-list-item {
+  background-color: white;
+}
+
+mat-sidenav-container {
+  mat-sidenav {
+    width: 250px;
+  }
+}

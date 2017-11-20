@@ -4,5 +4,13 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyCFi9vrIv6nDmlzpVk1F14Ak7Z9Gp9m_Fc',
+    authDomain: 'fempire-io.firebaseapp.com',
+    databaseURL: 'https://fempire-io.firebaseio.com',
+    projectId: 'fempire-io',
+    storageBucket: 'fempire-io.appspot.com',
+    messagingSenderId: '828452942542'
+  }
 };

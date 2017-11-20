@@ -1,0 +1,54 @@
+a.top-nav {
+  color: white;
+  font-size: 15px;
+}
+
+button.show-small.mat-button {
+  padding: 0px;
+  width: 36px;
+  min-width: 36px;
+  margin-right: 16px;
+}
+
+section#swiper {
+  height: 100vh;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.navbar-photo {
+  height: 40px;
+  max-height: 100%;
+}
+
+.navbar-spacing {
+  height: 1.5rem !important;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100% !important;
+}
+
+.sidenav-header {
+  background-color: #757575;
+  padding: 16px;
+  color: white !important;
+  height: 150px;
+  .inline {
+    display: inline-block;
+    h3 {
+      color: white !important;
+      margin: 0px;
+    }
+    label {
+      color: white !important;
+    }
+  }
+}

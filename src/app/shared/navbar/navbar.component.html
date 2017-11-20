@@ -1,0 +1,52 @@
+<mat-sidenav-container>
+  <mat-sidenav (swipeleft)="navClose()" #sidenav>
+    <div class="sidenav-header" fxLayoutAlign="start end">
+      <div class="inline">
+        <img [src]="(user | async)?.photoURL || './assets/profile.png'" [alt]="(user | async)?.displayName || 'Barbie Icon'" class="navbar-photo profile-pic">
+        <h3 *ngIf="(user | async)" [routerLink]="['/', 'profile']">{{(user | async)?.displayName}}</h3>
+        <h3 *ngIf="!(user | async)" (click)="signIn()">Sign In</h3>
+      </div>
+    </div>
+    <mat-nav-list>
+      <a mat-list-item class="side-nav" (click)="navClose()" [routerLink]="['/', 'speakers']">Speakers</a>
+      <a mat-list-item class="side-nav" (click)="navClose()" [routerLink]="['/', 'organizers']">Organizers</a>
+      <a mat-list-item class="side-nav" (click)="navClose()" [routerLink]="['/', 'mentors']">Mentors</a>
+      <mat-divider *ngIf="(user | async)"></mat-divider>
+      <a mat-list-item *ngIf="(user | async)" class="side-nav" (click)="apply()">Apply for Listing</a>
+      <a mat-list-item *ngIf="(user | async)" class="side-nav" (click)="signOut()">Sign Out</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar color="primary" class="sticky-header">
+    <button mat-button class="show-small" (click)="navToggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span [routerLink]="['/']">Fempire</span>
+    <span class="navbar-spacer"></span>
+    <a mat-button class="hide-small top-nav" [routerLink]="['/', 'speakers']">Speakers</a>
+    <a mat-button class="hide-small top-nav" [routerLink]="['/', 'organizers']">Organizers</a>
+    <a mat-button class="hide-small top-nav" [routerLink]="['/', 'mentors']">Mentors</a>
+
+    <button mat-button *ngIf="(user | async)" class="hide-small top-nav" [matMenuTriggerFor]="menu">
+      <img [src]="(user | async)?.photoURL" [alt]="(user | async)?.displayName" class="align-middle navbar-photo profile-pic">
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/', 'profile']">
+        <mat-icon>account_circle</mat-icon>
+        <span>{{(user | async)?.displayName}}</span>
+      </button>
+      <button mat-menu-item (click)="apply()">
+        <mat-icon>assignment</mat-icon>
+        <span>Apply for Listing</span>
+      </button>
+      <button mat-menu-item (click)="signOut()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Sign Out</span>
+      </button>
+    </mat-menu>
+    <a mat-button *ngIf="!(user | async)" class="hide-small top-nav" (click)="signIn()">Sign In</a>
+  </mat-toolbar>
+  <div id="content-section" class="full-window">
+    <section id="swiper" (swiperight)="navOpen()"></section>
+    <ng-content></ng-content>
+  </div>
+</mat-sidenav-container>

@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Sign In</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <section fxLayoutAlign="center center">
+      <div fxFlex="100">
+        <div fxLayout="row">
+          <div fxFlex="33" class="text-center">
+            <button mat-button (click)="signIn('github')">
+              <img src="assets/icons/github-grey.png" class="full-size" alt="GitHub Login">
+              <br> GitHub
+            </button>
+          </div>
+          <div fxFlex="33" class="text-center">
+            <button mat-button (click)="signIn('google')">
+              <img src="assets/icons/google-grey.png" class="full-size" alt="Google Login">
+              <br> Google
+            </button>
+          </div>
+          <div fxFlex="33" class="text-center">
+            <button mat-button (click)="signIn('twitter')">
+              <img src="assets/icons/twitter-grey.png" class="full-size" alt="Twitter Login">
+              <br> Twitter
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </mat-card-content>
+</mat-card>

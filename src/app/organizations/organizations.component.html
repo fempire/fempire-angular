@@ -1,0 +1,19 @@
+<section>
+    <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign="center" fxLayoutWrap>
+        <div *ngFor="let organization of organizations | async" fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-sm="25" fxFlex.gt-md="20"
+            class="mat-card-padding">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{organization.name}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image [src]="organization.logo" [alt]="organization.name">
+                <mat-card-content>
+                    <p>{{organization.about}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a mat-button [href]="organization.url" target="_blank">VIEW WEBSITE</a>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</section>

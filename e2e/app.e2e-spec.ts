@@ -1,14 +1,14 @@
-import { FempireAngularPage } from './app.po';
+import { AppPage } from './app.po';
 
 describe('fempire-angular App', () => {
-  let page: FempireAngularPage;
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new FempireAngularPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Welcome to fem!');
   });
 });

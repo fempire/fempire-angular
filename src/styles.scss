@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+$primary: mat-palette($mat-indigo, 700, 100, 900);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
+$text: #212121;
+$white: #FFFFFF;
+
+* {
+  word-wrap: break-word;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.87);
+  color: $text;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, label, p {
+  color: $text !important;
+}

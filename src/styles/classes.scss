@@ -1,0 +1,56 @@
+@import 'mixins';
+.full-size {
+  width: 100%;
+}
+
+.full-window {
+  @include bp-height;
+  width: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+.mat-card-padding {
+  padding: 16px;
+}
+
+.navbar-spacer {
+  flex: 1 1 auto;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  border: solid white 2px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .show-small {
+    display: block !important;
+  }
+  .hide-small {
+    display: none !important;
+  }
+}
+
+@media (min-width: 601px) {
+  .show-small {
+    display: none !important;
+  }
+  .hide-small {
+    display: block !important;
+  }
+}
