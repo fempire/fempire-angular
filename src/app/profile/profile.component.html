@@ -1,0 +1,123 @@
+<section fxLayout="column" fxLayout.gt-xs="row" fxLayoutWrap fxLayoutAlign="center">
+  <div fxFlex="100" fxFlex.gt-xs="80" fxFlex.gt-sm="70" fxFlex.gt-md="60" class="mat-card-padding">
+    <mat-card [class.hide]="!edit">
+      <mat-card-header>
+        <img mat-card-avatar [src]="(profile | async)?.photo || './assets/profile.png'" [alt]="(profile | async)?.name || 'Barbie Icon'">
+        <mat-card-title>{{(profile | async)?.name}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div id="location">
+          <h5>Location</h5>
+          <mat-form-field>
+            <input type="text" matInput [(ngModel)]="editing.location" placeholder="Location">
+          </mat-form-field>
+        </div>
+        <div id="topics" class="chips">
+          <h5>Topics</h5>
+          <mat-chip-list>
+            <mat-chip *ngFor="let topic of editing.topics; let i = index" color="accent" selected="true">
+              {{topic}}
+              <mat-icon (click)="removeTopic(i)">cancel</mat-icon>
+            </mat-chip>
+          </mat-chip-list>
+          <mat-form-field>
+            <input matInput placeholder="Search for a topic" (keyup)="topicsSearch($event.target.value)" #topicsSearchBar>
+          </mat-form-field>
+          <mat-chip-list>
+            <mat-chip *ngFor="let item of topics" disabled>{{item.topic}}
+              <mat-icon (click)="addTopic(item.topic)">add</mat-icon>
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+        <div id="about">
+          <h5>About</h5>
+          <mat-form-field>
+            <textarea matInput placeholder="Tell us about you!" (change)="editing.about = $event.target.value"></textarea>
+          </mat-form-field>
+        </div>
+        <div id="social">
+          <h5>Social</h5>
+          <mat-form-field>
+            <span matPrefix>https://github.com/</span>
+            <input type="text" matInput [(ngModel)]="editing.social.github" placeholder="GitHub">
+          </mat-form-field>
+          <mat-form-field>
+            <span matPrefix>https://www.linkedin.com/in/</span>
+            <input type="text" matInput [(ngModel)]="editing.social.linkedin" placeholder="LinkedIn">
+          </mat-form-field>
+          <mat-form-field>
+            <span matPrefix>https://twitter.com/</span>
+            <input type="text" matInput [(ngModel)]="editing.social.twitter" placeholder="Twitter">
+          </mat-form-field>
+          <mat-form-field>
+            <input type="text" matInput [(ngModel)]="editing.social.website" placeholder="Other Website">
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="edit = false">SAVE</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card [class.hide]="edit">
+      <mat-card-header>
+        <img mat-card-avatar [src]="(profile | async)?.photo || './assets/profile.png'" [alt]="(profile | async)?.name">
+        <mat-card-title>{{(profile | async)?.name}}</mat-card-title>
+        <mat-card-subtitle>{{(profile | async)?.location}}</mat-card-subtitle>
+        <span class="navbar-spacer"></span>
+        <button mat-button (click)="edit = true" *ngIf="self" class="text-right">
+          <mat-icon>mode_edit</mat-icon>
+        </button>
+      </mat-card-header>
+      <mat-card-content>
+        <div id="roles" class="chips">
+          <h5>Roles</h5>
+          <mat-chip-list>
+            <mat-chip *ngIf="(profile | async)?.mentor" color="primary" selected="true">Mentor</mat-chip>
+            <mat-chip *ngIf="(profile | async)?.organizer" color="primary" selected="true">Organizer</mat-chip>
+            <mat-chip *ngIf="(profile | async)?.speaker" color="primary" selected="true">Speaker</mat-chip>
+          </mat-chip-list>
+        </div>
+        <div id="topics" class="chips">
+          <h5>Topics</h5>
+          <mat-chip-list>
+            <mat-chip *ngFor="let topic of (profile | async)?.topics" color="accent" selected="true">{{topic}}</mat-chip>
+          </mat-chip-list>
+        </div>
+        <div [class.hide]="!(profile | async)?.about">
+          <h5>About</h5>
+          <p>{{(profile | async)?.about}}</p>
+        </div>
+        <div id="social" fxLayoutAlign="center center">
+          <div fxFlex="100" fxFlex.gt-xs="80" fxFlex.gt-sm="70" fxFlex.gt-md="60" fxFlex.gt-lg="50">
+            <div fxLayout="row">
+              <div [class.hide]="!(profile | async)?.social?.github" fxFlex="25" class="text-center">
+                <a mat-button [href]="'https://github.com/'+(profile | async)?.social?.github" target="_blank">
+                  <img src="assets/icons/github-grey.png" class="full-size" alt="GitHub Icon">
+                  <br> GitHub
+                </a>
+              </div>
+              <div [class.hide]="!(profile | async)?.social?.linkedin" fxFlex="25" class="text-center">
+                <a mat-button [href]="'https://www.linkedin.com/in/'+(profile | async)?.social?.linkedin" target="_blank">
+                  <img src="assets/icons/linkedin-grey.png" class="full-size" alt="LinkedIn Icon">
+                  <br> LinkedIn
+                </a>
+              </div>
+              <div [class.hide]="!(profile | async)?.social?.twitter" fxFlex="25" class="text-center">
+                <a mat-button [href]="'https://twitter.com/'+(profile | async)?.social?.twitter" target="_blank">
+                  <img src="assets/icons/twitter-grey.png" class="full-size" alt="Twitter Icon">
+                  <br> Twitter
+                </a>
+              </div>
+              <div [class.hide]="!(profile | async)?.social?.website" fxFlex="25" class="text-center">
+                <a mat-button [href]="(profile | async)?.social?.website" target="_blank">
+                  <img src="assets/icons/website-grey.png" class="full-size" alt="Website Icon">
+                  <br> Website
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

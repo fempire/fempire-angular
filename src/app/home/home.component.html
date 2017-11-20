@@ -1,0 +1,78 @@
+
+<section>
+  <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign="center" fxLayoutWrap>
+    <div fxFlex.xs="100" fxFlex.sm="90" fxFlex.lg="80" class="mat-card-padding">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Connecting Women in Technology</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            The Fempire is an international community of women taking action, 
+            solving problems, and advancing technology. 
+            By connecting to collaborate and inspire creativity in the computer science field 
+            the Fempire promotes diversity of opinion and drives innovation. Get connected
+            with organizers, mentors, and speakers in your area.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-button href="https://github.com/fempire" target="_blank">LEARN MORE</a>
+          <a mat-button [routerLink]="['/', 'organizations']">OTHER ORGANIZATIONS</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign="center">
+    <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.lg="33" class="mat-card-padding">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Organizers</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://thegongzuo.files.wordpress.com/2016/12/68161-cities-for-women-in-tech.jpg?w=660" alt="techtable">
+        <mat-card-content>
+          <p>Planning an event? Find an organizer near you. Fempire organizers will help you host great events to create and
+            grow with your community!</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-button [routerLink]="['/', 'organizers']">FIND ORGANIZERS</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.lg="33" class="mat-card-padding">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Mentors</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://biomedicalengineering.tcnj.edu/files/2017/03/department-biomedical-3ups-faculty-FINAL.jpg"
+          alt="speakerpanel">
+        <mat-card-content>
+          <p>
+            Let's do this together. Find a metnor to help propel your future in technology. Go further with a strong support system!
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-button [routerLink]="['/', 'mentors']">FIND MENTORS</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div fxFlex.xs="100" fxFlex.sm="90" fxFlex.lg="80" class="mat-card-padding">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Speakers</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://blogdotposhmarkdotcom.files.wordpress.com/2015/08/poshfest-panel.jpg?w=665" alt="speakerpanel">
+        <mat-card-content>
+          <p>
+            Find a speaker near you. Search your topics of interest and find a tech speaker to engage your community!
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-button [routerLink]="['/', 'speakers']">FIND SPEAKERS</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</section>
